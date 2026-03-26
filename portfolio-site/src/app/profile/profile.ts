@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-profile',
   imports: [RouterLink],
   standalone: true,
-  templateUrl: './home.html',
-  styleUrl: './home.css'
+  templateUrl: './profile.html',
+  styleUrl: './profile.css'
 })
-export class Home {
+export class Profile {
 
 }

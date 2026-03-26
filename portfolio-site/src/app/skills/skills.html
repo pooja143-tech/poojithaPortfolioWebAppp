@@ -1,2 +1,4 @@
-<app-carousel></app-carousel>
 
+@for (section of projectSkills; track section) {
+  <app-carousel [projectData]="section"></app-carousel>
+}

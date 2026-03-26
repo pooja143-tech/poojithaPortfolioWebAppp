@@ -4,10 +4,11 @@ import { Carousel } from './carousel/carousel';
 import { Home } from './home/home';
 import { Header } from './header/header';
 import { Projects } from './projects/projects';
+import { Starfield } from './starfield/starfield';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header],
+  imports: [RouterOutlet,Header,Starfield],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css'
