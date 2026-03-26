@@ -1,0 +1,19 @@
+body {
+  @apply bg-[#0b0c2a] text-white overflow-hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('/stars.png') repeat;
+  animation: twinkle 10s infinite linear;
+  opacity: 0.6;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}

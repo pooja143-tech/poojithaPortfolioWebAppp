@@ -1,0 +1,59 @@
+
+
+  <header class="bg-[#111] border-b border-gray-700 py-4">
+  <div class="flex items-center justify-between px-6">
+    
+    <!-- Logo + Tagline (Left-aligned) -->
+    <div class="flex flex-col items-start">
+      <h1 class="text-2xl font-bold text-red-500">Portfolio</h1>
+      <p class="text-gray-300">Welcome to My World</p>
+    </div>
+
+    <!-- Navigation (Right-aligned) -->
+    <nav class="flex gap-4">
+      <a
+        routerLink="/"
+        routerLinkActive="!text-red-500 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 text-white hover:text-red-500 transition-colors"
+      >
+        Home
+      </a>
+       <a
+        routerLink="/profile"
+        routerLinkActive="!text-red-500 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 text-white hover:text-red-500 transition-colors"
+      >
+        Profile
+      </a>
+      <a
+        routerLink="/skills"
+        routerLinkActive="!text-red-500 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 text-white hover:text-red-500 transition-colors"
+      >
+        Skills
+      </a>
+      <a
+        routerLink="/projects"
+        routerLinkActive="!text-red-500 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 text-white hover:text-red-500 transition-colors"
+      >
+        Projects
+      </a>
+      <a
+        routerLink="/my-night-sky"
+        routerLinkActive="!text-red-500 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 text-white hover:text-red-500 transition-colors"
+      >
+        My Night Sky
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+
