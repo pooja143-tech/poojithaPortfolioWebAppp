@@ -1,0 +1,28 @@
+<!-- Exit Button -->
+   <header class="app-header">
+  <!-- Exit Button (left side) -->
+  <button (click)="exitNightSky()" class="exit-btn" title="Exit to home">
+    <svg class="exit-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M19 12H12" />
+      <path d="M14 16l-4-4 4-4" />
+      <path d="M20 4h2v16h-4" />
+    </svg>
+    <span class="exit-text">Exit</span>
+  </button>
+
+  <!-- Extra Buttons (right side) -->
+  <div class="header-buttons">
+    <button class="btn blue-btn" [style.boxShadow]="selectedColor === '#3b82f6' ? '0 0 20px #3b82f6' : 'none'" (click)="changeStarColor('#3b82f6')">Blue</button>
+    <button class="btn red-btn" [style.boxShadow]="selectedColor === '#ef4444' ? '0 0 20px #ef4444' : 'none'" (click)="changeStarColor('#ef4444')">Red</button>
+    <button class="btn green-btn" [style.boxShadow]="selectedColor === '#22c55e' ? '0 0 20px #22c55e' : 'none'" (click)="changeStarColor('#22c55e')">Green</button>
+    <button class="btn pink-btn" [style.boxShadow]="selectedColor === '#ec4899' ? '0 0 20px #ec4899' : 'none'" (click)="changeStarColor('#ec4899')">Pink</button>
+    <button class="btn multi-btn" [style.boxShadow]="selectedColor === 'multi' ? '0 0 20px yellow' : 'none'" (click)="changeStarColor('multi')">Multi</button>
+  </div>
+</header>
