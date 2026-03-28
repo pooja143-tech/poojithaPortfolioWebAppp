@@ -1,19 +1,46 @@
-body {
-  @apply bg-[#0b0c2a] text-white overflow-hidden;
+.skills-section {
+  animation: slideInUp 0.6s ease-out;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url('/stars.png') repeat;
-  animation: twinkle 10s infinite linear;
-  opacity: 0.6;
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes twinkle {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
+.skill-card {
+  perspective: 1000px;
+}
+
+.skill-card div {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover div {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Stagger animation for skill cards */
+@for $i from 1 through 50 {
+  .skill-card:nth-child(#{$i}) {
+    animation: fadeInScale 0.5s ease-out #{$i * 0.05}s backwards;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

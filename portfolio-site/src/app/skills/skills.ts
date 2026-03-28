@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Carousel } from '../carousel/carousel';
 
 @Component({
   selector: 'app-skills',
-  imports: [Carousel],
+  imports: [CommonModule, Carousel],
+  standalone: true,
   templateUrl: './skills.html',
   styleUrl: './skills.css'
 })
 export class Skills {
-projectSkills = [
+  projectSkills = [
   {
     description: 'Core Frontend',
     skills: [
@@ -30,9 +32,6 @@ projectSkills = [
       { title: 'NgRx', image: 'ngrx.jpeg' },
       { title: 'Angular Material', image: 'angularMat.png' },
       { title: 'MFE (module Federation)', image: 'mfe.webp' },
-      // { title: 'Project Six', image: 'corsi6.png' },
-      // { title: 'Project Seven', image: 'corsi7.jpeg' },
-      // { title: 'Project Eight', image: 'favicon.ico' },
     ],
   },
   {
@@ -51,6 +50,4 @@ projectSkills = [
     ],
   },
 ];
-
-
 }

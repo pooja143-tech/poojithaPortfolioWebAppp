@@ -1,14 +1,19 @@
-<h3 class="px-6 text-xl text-gray-300">{{projectData?.description}}</h3>
+<div class="mb-8">
+  <h3 class="px-6 text-2xl font-bold text-red-500 mb-2">{{projectData?.description}}</h3>
+  <div class="h-1 w-20 bg-gradient-to-r from-red-500 to-transparent px-6"></div>
+</div>
 <div class="relative">
   <button
     (click)="scrollLeft()"
-    class="absolute left-2 top-[35%] -translate-y-1/2 z-10 bg-gray-800 p-2 mx-5 rounded-full shadow hover:bg-gray-200 "
+    [disabled]="!canScrollLeft"
+    class="absolute left-2 top-[35%] -translate-y-1/2 z-10 bg-red-500 hover:bg-red-600 disabled:bg-gray-500 text-white disabled:text-gray-400 p-3 mx-5 rounded-full shadow transition-all duration-300 text-xl font-bold disabled:cursor-not-allowed disabled:opacity-50"
   >
     ◀
   </button>
   <button
     (click)="scrollRight()"
-    class="absolute right-2 top-[35%] -translate-y-1/2 z-10 bg-gray-800 p-2 mx-5 rounded-full shadow hover:bg-gray-200"
+    [disabled]="!canScrollRight"
+    class="absolute right-2 top-[35%] -translate-y-1/2 z-10 bg-red-500 hover:bg-red-600 disabled:bg-gray-500 text-white disabled:text-gray-400 p-3 mx-5 rounded-full shadow transition-all duration-300 text-xl font-bold disabled:cursor-not-allowed disabled:opacity-50"
   >
     ▶
   </button>
@@ -19,10 +24,10 @@
   <div class="flex gap-4">
     <div
       *ngFor="let item of projectData?.skills"
-      class="min-w-[225px] max-w-[225px] bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 snap-start"
+      class="min-w-[225px] max-w-[225px] bg-gray-800 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 snap-start border border-gray-700 hover:border-red-500 group"
     >
-      <img [src]="item.image" alt="Card" class="w-full h-32 object-cover rounded-t-lg" />
-      <div class="p-2 text-gray-300 text-sm font-semibold">{{ item.title }}</div>
+      <img [src]="'/'+item.image" alt="Card" class="w-full h-32 object-cover rounded-t-lg" />
+      <div class="p-2 text-gray-300 text-sm font-semibold group-hover:text-red-400 transition-colors duration-300">{{ item.title }}</div>
     </div>
   </div>
 </div>
