@@ -30,7 +30,7 @@ export class Projects {
         'Mentored junior developers to ensure high‑quality delivery',
         'Improved platform accessibility and performance metrics'
       ],
-      image: '/projects/savvas-learning.jpeg'
+      image: 'projects/savvas-learning.jpeg'
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ export class Projects {
         'Enhanced analytics dashboard user experience',
         'Improved performance and code reusability'
       ],
-      image: '/projects/ascend-analytics.jpeg'
+      image: 'projects/ascend-analytics.jpeg'
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ export class Projects {
         'Optimized UX for medical staff workflows',
         'Improved data security and accessibility'
       ],
-      image: '/projects/patient-management.jpeg'
+      image: 'projects/patient-management.jpeg'
     }
   ];
 }

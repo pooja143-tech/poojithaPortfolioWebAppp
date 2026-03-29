@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { StarfieldService } from '../services/starfield.service';
+import { StarfieldService } from '../services/starfield';
 
 @Component({
   selector: 'app-my-night-sky',

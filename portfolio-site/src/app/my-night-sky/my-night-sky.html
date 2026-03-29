@@ -1,8 +1,10 @@
-<!-- Exit Button -->
-   <header class="app-header">
-  <!-- Exit Button (left side) -->
-  <button (click)="exitNightSky()" class="exit-btn" title="Exit to home">
-    <svg class="exit-icon"
+<header class="app-header flex items-center justify-between text-white px-3 py-2">
+  
+  <!-- Exit Button (start/left) -->
+  <button (click)="exitNightSky()" 
+          class="exit-btn flex items-center gap-2 text-sm sm:text-base hover:text-red-500 transition whitespace-nowrap"
+          title="Exit to home">
+    <svg class="exit-icon w-5 h-5 sm:w-6 sm:h-6"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -17,12 +19,22 @@
     <span class="exit-text">Exit</span>
   </button>
 
-  <!-- Extra Buttons (right side) -->
-  <div class="header-buttons">
-    <button class="btn blue-btn" [style.boxShadow]="selectedColor === '#3b82f6' ? '0 0 20px #3b82f6' : 'none'" (click)="changeStarColor('#3b82f6')">Blue</button>
-    <button class="btn red-btn" [style.boxShadow]="selectedColor === '#ef4444' ? '0 0 20px #ef4444' : 'none'" (click)="changeStarColor('#ef4444')">Red</button>
-    <button class="btn green-btn" [style.boxShadow]="selectedColor === '#22c55e' ? '0 0 20px #22c55e' : 'none'" (click)="changeStarColor('#22c55e')">Green</button>
-    <button class="btn pink-btn" [style.boxShadow]="selectedColor === '#ec4899' ? '0 0 20px #ec4899' : 'none'" (click)="changeStarColor('#ec4899')">Pink</button>
-    <button class="btn multi-btn" [style.boxShadow]="selectedColor === 'multi' ? '0 0 20px yellow' : 'none'" (click)="changeStarColor('multi')">Multi</button>
+  <!-- Color Buttons (end/right) -->
+  <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+    <button class="btn blue-btn px-3 py-1 text-xs sm:text-sm rounded whitespace-nowrap"
+            [style.boxShadow]="selectedColor === '#3b82f6' ? '0 0 12px #3b82f6' : 'none'"
+            (click)="changeStarColor('#3b82f6')">Blue</button>
+    <button class="btn red-btn px-3 py-1 text-xs sm:text-sm rounded whitespace-nowrap"
+            [style.boxShadow]="selectedColor === '#ef4444' ? '0 0 12px #ef4444' : 'none'"
+            (click)="changeStarColor('#ef4444')">Red</button>
+    <button class="btn green-btn px-3 py-1 text-xs sm:text-sm rounded whitespace-nowrap"
+            [style.boxShadow]="selectedColor === '#22c55e' ? '0 0 12px #22c55e' : 'none'"
+            (click)="changeStarColor('#22c55e')">Green</button>
+    <button class="btn pink-btn px-3 py-1 text-xs sm:text-sm rounded whitespace-nowrap"
+            [style.boxShadow]="selectedColor === '#ec4899' ? '0 0 12px #ec4899' : 'none'"
+            (click)="changeStarColor('#ec4899')">Pink</button>
+    <button class="btn multi-btn px-3 py-1 text-xs sm:text-sm rounded whitespace-nowrap"
+            [style.boxShadow]="selectedColor === 'multi' ? '0 0 12px yellow' : 'none'"
+            (click)="changeStarColor('multi')">Multi</button>
   </div>
 </header>

@@ -9,13 +9,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css'
 })
 export class Home {
-  imageSrc = '/poojilonghair1.png';
+  imageSrc = 'poojilonghair1.png';
 
   onImageHover() {
-    this.imageSrc = '/poojibowhaircut.png';
+    this.imageSrc = 'poojibowhaircut.png';
   }
 
   onImageLeave() {
-    this.imageSrc = '/poojilonghair1.png';
+    this.imageSrc = 'poojilonghair1.png';
   }
 }
