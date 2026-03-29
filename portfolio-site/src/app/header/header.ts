@@ -13,4 +13,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Header {
   mynightsky = true;
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

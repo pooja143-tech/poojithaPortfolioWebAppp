@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
+import { StarfieldService } from './starfield';
 
-import { StarfieldService } from './starfield.service';
+
 
 describe('StarfieldService', () => {
   let service: StarfieldService;

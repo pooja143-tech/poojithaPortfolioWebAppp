@@ -6,7 +6,8 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import * as THREE from 'three';
-import { StarfieldService } from '../services/starfield.service';
+import { StarfieldService } from '../services/starfield';
+
 
 @Component({
   selector: 'app-starfield',

@@ -15,6 +15,8 @@
   border: none;
   color: #ef4444;
   cursor: pointer;
+  padding-right: 29px;
+  margin-left: -29px;
   font-size: 1rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -40,9 +42,8 @@
   /* padding: 0.5rem 1.5rem; */
   width: 4.4rem;
   height: 2.5rem;
-
   border: 2px solid transparent;
-  background: none;              /* no fill */
+  background: none;
   font-weight: bold;
   border-radius: 0.5rem;
   cursor: pointer;
